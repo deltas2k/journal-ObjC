@@ -18,13 +18,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
     [self.tableView reloadData];
 }
+
+
 
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     return [[[MOEntryController sharedController] entries] count];
 }
 
